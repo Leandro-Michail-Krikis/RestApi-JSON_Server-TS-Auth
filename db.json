@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "titulo": "Teste",
+      "descricao": "Teste descricao"
+    }
+  ],
+  "comentario": [
+    {
+      "id": 1,
+      "usuario" : "Leandro",
+      "comentario" : "testeComentario"
+    }
+  ]
+}
