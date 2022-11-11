@@ -38,6 +38,11 @@ $ cd RestApi-JSON_Server-TS-Auth
 $ yarn ou npm install
 ```
 
+```bash
+# Para iniciar o projeto.
+$ yarn ou npm start
+```
+
 
 <a id="config"></a>
 
