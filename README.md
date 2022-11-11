@@ -1,10 +1,8 @@
 # RestApi-JSON_Server-TS-Auth
 
-- [RestApi-JSON_Server-TS-Auth](#restapi-json_server-ts-auth)
-  - [Tecnologias](#tecnologias)
-- [Como Iniciar](#como-iniciar)
-    - [**Pré-requisitos**](#pré-requisitos)
-- [Como Configurar](#como-configurar)
+- [Tecnologias](#tech)
+- [Como Iniciar](#start)
+- [Como Configurar](#config)
 <a id="tech"></a>
 
 Este projeto serve para ajudar no desenvolvimento de aplicações front-end.
@@ -50,5 +48,4 @@ $ yarn ou npm install
 # Entre no arquivo "servet.ts" e adicione os paths 
 na variavel "rotasParaNaoValidar"
 # Ou coloque "*" para desabilitar globalmente
-$ yarn ou npm install
 ```
