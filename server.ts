@@ -23,6 +23,7 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser);
 //ednpoint para retornar token "http://localhost:3000/session" "{"email" : "admin","password" : "admin"}"
 server.post("/session", retornaToken);
+//O token tem que ir nos headers como "Authorization"
 //Ele valida todos os endpoints exceto o http://localhost:3000 que e algo parecido com swagger
 server.use(validaUsuario);
 
@@ -48,7 +49,6 @@ function retornaToken(req, res) {
 
 function validaUsuario(req, res, next) {
     try {
-        console.log(rotasParaNaoValidar.indexOf(req.url));
         if(rotasParaNaoValidar.indexOf(req.url) != -1) return next()
         const publicKey = fs.readFileSync("public.pem");
         const { authorization } = req.headers;
