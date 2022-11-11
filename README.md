@@ -1,8 +1,10 @@
 # RestApi-JSON_Server-TS-Auth
 
-- [Tecnologias](#tech)
-- [Como Utilizar](#settings)
-
+- [RestApi-JSON_Server-TS-Auth](#restapi-json_server-ts-auth)
+  - [Tecnologias](#tecnologias)
+- [Como Iniciar](#como-iniciar)
+    - [**Pré-requisitos**](#pré-requisitos)
+- [Como Configurar](#como-configurar)
 <a id="tech"></a>
 
 Este projeto serve para ajudar no desenvolvimento de aplicações front-end.
@@ -14,9 +16,9 @@ O projeto desenvolvido utiliza as seguintes tecnologias:
 - [@types/json-server](https://www.npmjs.com/package/@types/json-server) 
 - [jsonwebtoken](https://github.com/kelektiv/node.bcrypt.js/)
 
-<a id="settings"></a>
+<a id="start"></a>
 
-# Como Utilizar
+# Como Iniciar
 
 ### **Pré-requisitos**
 
@@ -28,7 +30,7 @@ $ git clone https://github.com/Leandro-Michail-Krikis/RestApi-JSON_Server-TS-Aut
 ```
 
 ```bash
-# Entre na pasta projeto
+# Entre na pasta do projeto
 $ cd RestApi-JSON_Server-TS-Auth
 ```
 
@@ -38,3 +40,15 @@ $ cd RestApi-JSON_Server-TS-Auth
 $ yarn ou npm install
 ```
 
+
+<a id="config"></a>
+
+# Como Configurar
+
+```bash
+# Para desabilitar a autenticação em alguns "paths".
+# Entre no arquivo "servet.ts" e adicione os paths 
+na variavel "rotasParaNaoValidar"
+# Ou coloque "*" para desabilitar globalmente
+$ yarn ou npm install
+```
