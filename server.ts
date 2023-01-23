@@ -1,11 +1,13 @@
 //rotas para nao serem validadas coloque * para desabilitar a validação
-const rotasParaNaoValidar = ["/db", "/__rules"];
+const rotasParaNaoValidar = ["*"];
 //Criado dinamicamente
 import posts from "./dataBase/posts";
 //Criado estaticamente
 import comentarios from "./dataBase/comentarios";
 //Importacao para ler arquivos
 const fs = require("fs");
+//Importação uuid
+import { v4 as uuidv4 } from 'uuid';
 //importacao para auteticacao
 import * as jwt from "jsonwebtoken";
 //e praticamente  node-express
@@ -26,10 +28,17 @@ server.get("/session", retornaToken);
 //O token tem que ir nos headers como "Authorization"
 //Ele valida todos os endpoints exceto o http://localhost:3000 que e algo parecido com swagger
 server.use(validaUsuario);
-
+//Usar uuid no backend
+server.use((req, res, next) => {
+  if (req.method === 'POST') {
+    req.body.id = uuidv4()
+  }
+  // Continue to JSON Server router
+  next()
+})
 server.use(router);
-server.listen(3000, () => {
-  console.log("O servidor esta rodando: http://localhost:3000");
+server.listen(3030, () => {
+  console.log("O servidor esta rodando: http://localhost:3030");
 });
 
 function retornaToken(req, res) {

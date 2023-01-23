@@ -1,6 +1,6 @@
 const posts = [];
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 2; i++) {
   posts.push({
     id: i,
     titulo: "Titulo " + i,
